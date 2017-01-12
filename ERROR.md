@@ -1,6 +1,8 @@
-Not all time in the game has been accounted for
+Not all time in the game has been accounted for. 
 
-The error lies in the definition of endTime.  endTime is defined in the evaluate input function:
+The game is showing, on average, a variance of two milliseconds.  Occasionally I see variances as high as 6 milliseconds.
+
+endTime is defined in the evaluate input function.  The error lies in the value of endTime when case "x" occurs.  
 
         func evaluateInput(theInput string, startTime int64, toggle string) int64{
 	      endTime := getCurrentTime()
@@ -21,3 +23,11 @@ The error lies in the definition of endTime.  endTime is defined in the evaluate
 	      endTime = getCurrentTime()
 	      return endTime
       }
+      
+
+Variants to the above equation:
+* If I remove endtime statement from line 23, the variance increases.
+* If I remove endtime statement from line 12, the variance increases.
+* If I remove both, the variance increases.
+
+This is very odd.  One would assume that defining end time above the switch statement would be sufficient.
