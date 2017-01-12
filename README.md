@@ -2,6 +2,7 @@
 Timer Game in Golang as Programming Challenge with Fixed Criteria
 
 Criteria is as follows:
+
 1.  Write code in a functional manner such that code may be re-used in other projects
 2.  Thoroughly note all functions and variables used in the project
 3.  Thoroughly test all functions and variables used in project with Go's built in testing.
