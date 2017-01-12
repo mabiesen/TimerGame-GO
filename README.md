@@ -10,8 +10,7 @@ Criteria is as follows:
 2.  Thoroughly note all functions and variables used in the project
   * Notes should include parameters, description, returns, necessary packages, necessary sister functions, etc.
 3.  Thoroughly test all functions and variables used in project with Go's built in testing.
-
-The Timer Game records all game on/off time and presents to the user.
+4.  Game Objective: The Timer Game records all game on/off time and presents to the user.
 
 Game Flow is as follows:
 * User is prompted to type 's' to start game.  Game does not move forward until user types 's'
