@@ -35,8 +35,6 @@ endTime is defined in the evaluate input function.  The error lies in the value 
       
 
 Variants to the above equation:
-* If I remove endtime statement from line 23, the variance increases.
-* If I remove endtime statement from line 12, the variance increases.
-* If I remove both, the variance increases.
+* If I remove endtime statement from the case "x" statement, variance increases.
 
 This is very odd.  One would assume that defining end time above the switch statement would be sufficient.
