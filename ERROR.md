@@ -9,7 +9,8 @@ endTime is defined in the evaluate input function.  The error lies in the value 
 		@desc - Evaluate user input during game for toggle or end game.
 		@params 1. theInput String
 		@theInput will be a single letter provided by user
-		@return - none
+		@return 1. endTime int64
+		note: endTime only returned when user opts to exit game.
 		@type - none
 		@pkg - none
 		func evaluateInput(theInput string, startTime int64, toggle string) int64{
