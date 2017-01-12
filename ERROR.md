@@ -4,25 +4,33 @@ The game is showing, on average, a variance of two milliseconds.  Occasionally I
 
 endTime is defined in the evaluate input function.  The error lies in the value of endTime when case "x" occurs.  
 
-        func evaluateInput(theInput string, startTime int64, toggle string) int64{
-	      endTime := getCurrentTime()
 
-	      switch theInput {
-	      case "x":
-		      endTime = getCurrentTime()
-		      logTimeSpent(toggle, startTime, endTime)	//drops to end of switch statement
-	      case "t":
-		      logTimeSpent(toggle, startTime, endTime)
-		      toggle = changeToggleState(toggle)
-		      alertUserStateChg(toggle)
-		recurGameContainer(toggle, endTime)
-	      default:
-		      fmt.Println("That is not a valid input.")
-		      recurGameContainer(toggle, startTime)		//returns start time as it was received
-	      }
-	      endTime = getCurrentTime()
-	      return endTime
-      }
+		@func - evaluateInput
+		@desc - Evaluate user input during game for toggle or end game.
+		@params 1. theInput String
+		@theInput will be a single letter provided by user
+		@return - none
+		@type - none
+		@pkg - none
+		func evaluateInput(theInput string, startTime int64, toggle string) int64{
+			endTime := getCurrentTimeMillis()
+
+			switch theInput {
+			case "x":
+				endTime = getCurrentTimeMillis()
+				logTimeSpent(toggle, startTime, endTime)	//drops to end of switch statement
+			case "t":
+				logTimeSpent(toggle, startTime, endTime)
+				toggle = changeToggleState(toggle, "on", "off")
+				alertUserStateChg(toggle)
+				recurGameContainer(toggle, endTime)
+			default:
+				fmt.Println("That is not a valid input.")
+				recurGameContainer(toggle, startTime)		//returns start time as it was received
+			}
+			endTime = getCurrentTimeMillis()
+			return endTime
+		}
       
 
 Variants to the above equation:
