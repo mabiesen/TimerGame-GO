@@ -18,6 +18,7 @@ Game Flow is as follows:
 * When user types 'x', the game stops.  Information regarding game time is then presented to the user.
 
 Commits
+* 1/12/2017 06:27 PM RUNNING          - Fully refactored, testing nearly complete, evaluateInput NOT yet corrected.
 * 1/12/2017 01:52 PM RUNNING          - Needs more testing, more refactoring, correct evaluateInput function
 * 1/12/2017 00:00 AM RUNNING          - Needs more testing, correct evaluateInput function, display arrays with session number
 * 1/11/2017 08:14 PM NOT YET COMPLETE - Needs closeout function to print slices, compare to total, and need testing
