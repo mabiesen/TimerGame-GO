@@ -59,7 +59,7 @@ var totalTime int64 = 0			//Given value at end of game in beginGameContainer
 func scanForInput() string{
 	fmt.Println("Waiting for input...")
 	reader1 := bufio.NewReader(os.Stdin)
-	userInput, _ := reader1.ReadString('\n')
+	userInput, _ := reader1.ReadString('\n') //Remove the newline character?
 	return strings.TrimSpace(userInput)
 }
 
